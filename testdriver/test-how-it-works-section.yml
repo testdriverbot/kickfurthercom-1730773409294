@@ -1,0 +1,12 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "How it Works" in the header.
+    commands:
+      - command: hover-text
+        text: How it Works
+        description: link in the header
+        action: click
+  - prompt: Assert a section or page explaining the process loads.
+    commands:
+      - command: assert
+        expect: the page explaining the process is visible
