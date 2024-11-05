@@ -1,0 +1,88 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "See My Funding Potential."
+    commands:
+      - command: hover-text
+        text: See My Funding Potential
+        description: button to check funding potential
+        action: click
+  - prompt: Assert that a form or interactive element appears.
+    commands:
+      - command: assert
+        expect: form fields are visible
+  - prompt: Complete the form and any additional steps.
+    commands:
+      - command: hover-text
+        text: First Name*
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name*
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Work Email*
+        description: email field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Phone*
+        description: phone field
+        action: click
+      - command: type
+        text: 1234567890
+      - command: hover-text
+        text: Company Name*
+        description: company name field
+        action: click
+      - command: type
+        text: Example Corp
+      - command: hover-text
+        text: Website URL*
+        description: website URL field
+        action: click
+      - command: type
+        text: www.example.com
+      - command: hover-text
+        text: My Company Sells
+        description: dropdown for company type
+        action: click
+      - command: hover-text
+        text: US Entity/Owner?
+        description: yes option for US entity
+        action: click
+      - command: hover-text
+        text: See My Funding Potential
+        description: submit button
+        action: click
+  - prompt: Complete the form and any additional steps.
+    commands:
+      - command: hover-text
+        text: My Company Sells
+        description: dropdown for company type
+        action: click
+      - command: hover-text
+        text: Retail
+        description: select retail option
+        action: click
+      - command: hover-text
+        text: Your company's revenue in the last 12 months*
+        description: revenue field
+        action: click
+      - command: type
+        text: 500000
+      - command: hover-text
+        text: See My Funding Potential
+        description: submit button
+        action: click
+  - prompt: >-
+      Assert a success message is displayed.  # Use the content of the file from
+      the environment
+    commands:
+      - command: assert
+        expect: Congratulations! You Are Pre-Qualified To Receive Funding!
