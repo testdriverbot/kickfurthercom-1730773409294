@@ -1,0 +1,22 @@
+version: 4.0.80
+steps:
+  - prompt: If a location permission prompt appears, choose "Block."
+    commands:
+      - command: hover-text
+        text: Block
+        description: location permission prompt option
+        action: click
+  - prompt: If a location permission prompt appears, choose "Block."
+    commands:
+      - command: hover-text
+        text: Block
+        description: location permission prompt option
+        action: click
+  - prompt: If a location permission prompt appears, choose "Block."
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Block
+        description: location permission prompt option
+        action: click
