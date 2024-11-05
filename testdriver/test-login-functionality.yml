@@ -1,0 +1,19 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Login" in the header.
+    commands:
+      - command: hover-text
+        text: Login
+        description: login button in the header
+        action: click
+  - prompt: Assert the login page or popup appears.
+    commands:
+      - command: assert
+        expect: the URL contains "login"
+  - prompt: Assert the login page or popup appears.
+    commands:
+      - command: scroll-until-text
+        text: Username
+        direction: down
+      - command: assert
+        expect: the login form is visible
