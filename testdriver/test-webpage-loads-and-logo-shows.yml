@@ -1,0 +1,12 @@
+version: 4.0.80
+steps:
+  - prompt: Assert the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: the webpage displays "INVENTORY NOW. PAY LATER."
+  - prompt: >-
+      Assert the logo is visible on the homepage.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the webpage displays "FURTHER"
