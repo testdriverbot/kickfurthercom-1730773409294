@@ -1,0 +1,18 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "About Us" in the header.
+    commands:
+      - command: hover-text
+        text: About Us
+        description: link in the header
+        action: click
+  - prompt: Assert the "About Us" page loads.
+    commands:
+      - command: assert
+        expect: We are Kickfurther
+  - prompt: >-
+      Verify the team or mission statements are visible.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: We power product entrepreneurs' growth
