@@ -1,0 +1,24 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Growth Stories" in the header.
+    commands:
+      - command: hover-text
+        text: Growth Stories
+        description: link in the header
+        action: click
+  - prompt: Assert the page with growth stories is displayed.
+    commands:
+      - command: assert
+        expect: JOIN 800+ GROWTH STORIES is visible on the page
+  - prompt: Interact with a story if available.
+    commands:
+      - command: hover-text
+        text: Picolina
+        description: story title on the page
+        action: click
+  - prompt: >-
+      Assert any story content or media loads correctly.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: Number of Co-Ops is visible on the page
